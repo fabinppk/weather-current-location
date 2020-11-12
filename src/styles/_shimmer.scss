@@ -1,0 +1,32 @@
+@mixin shine() {
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: placeholderShimmer;
+    animation-name: placeholderShimmer;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    background: $color-grey-7;
+    background-image: linear-gradient(
+        to right,
+        $color-grey-7 3%,
+        $color-grey-6 25%,
+        $color-grey-7 36%
+    );
+    background-size: 1200px 100%;
+    width: 100%;
+    border-radius: $border-radius;
+}
+
+@keyframes placeholderShimmer {
+    0% {
+        background-position: -1200px 0;
+    }
+
+    100% {
+        background-position: 1200px 0;
+    }
+}
