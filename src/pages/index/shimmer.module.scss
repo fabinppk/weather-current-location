@@ -3,6 +3,17 @@
     opacity: 0.6;
 }
 
+.image {
+    opacity: 0.6;
+    @include shine;
+    height: 105px;
+    width: 150px;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .block {
     position: relative;
     display: flex;
@@ -10,16 +21,6 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
-
-    .image {
-        @include shine;
-        height: 105px;
-        width: 150px;
-        position: absolute;
-        bottom: 80%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
 
     .description {
         @include shine;

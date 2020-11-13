@@ -34,16 +34,18 @@ const Index = () => {
                     data-testid="app"
                     className={classnames(style.content, style[weather.weather[0].main])}
                 >
+                    <img
+                        className={style.icon}
+                        src={defineUrlImage(weather.weather[0].icon)}
+                        alt={weather.weather[0].main}
+                    />
                     <div className={style.block}>
-                        <img
-                            className={style.icon}
-                            src={defineUrlImage(weather.weather[0].icon)}
-                            alt={weather.weather[0].main}
-                        />
                         <div className={style.description}>{weather.weather[0].description}</div>
                         <div className={style.value}>{weather.main.temp.toFixed()}</div>
+                        <p
+                            className={style.location}
+                        >{`${weather.name}, ${weather.sys.country}`}</p>
                     </div>
-                    <p className={style.location}>{`${weather.name}, ${weather.sys.country}`}</p>
                     <MinMax min={weather.main.temp_min} max={weather.main.temp_max} />
                 </div>
             ) : (
