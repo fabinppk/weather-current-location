@@ -1,6 +1,36 @@
 :root {
     /* Application Background */
-    --app-background: white;
+    --app-background: #007bffa8;
+
+    /* Conditions Color */
+
+    --color-clouds-light: #e4e4e4;
+    --color-clouds-normal: #a2a2a2;
+    --color-clouds-dark: #575757;
+
+    --color-clear-light: #ddf2ff;
+    --color-clear-normal: #009eff;
+    --color-clear-dark: #15a6ff;
+
+    --color-atmosphere-light: #d4c8c6;
+    --color-atmosphere-normal: #8d8381;
+    --color-atmosphere-dark: #887d7b;
+
+    --color-snow-light: #d7d2ea;
+    --color-snow-normal: #aba3cf;
+    --color-snow-dark: #747186;
+
+    --color-rain-light: #8ec7ff;
+    --color-rain-normal: #1b8bfa;
+    --color-rain-dark: #0070df;
+
+    --color-drizzle-light: #b3cad6;
+    --color-drizzle-normal: #156e9c;
+    --color-drizzle-dark: #496574;
+
+    --color-thunderstorm-light: #e7aacf;
+    --color-thunderstorm-normal: #8b2e66;
+    --color-thunderstorm-dark: #76345c;
 
     /* Gray Color */
 
@@ -22,6 +52,7 @@
     --box-shadow-1: 0px 2px 4px rgba(0, 0, 0, 0.05);
     --box-shadow-2: 0 4px 4px rgba(0, 0, 0, 0.02), 0 0px 9px rgba(0, 0, 0, 0.09);
     --box-shadow-3: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    --text-shadow: #2727277e;
 
     /* Trnasitions */
 
@@ -29,7 +60,7 @@
     --transition-type: ease;
     --transition-delay: 0.3s;
 
-    --font-primary: 'Source Sans Pro', sans-serif;
+    --font-primary: 'Spartan', sans-serif;
     --font-secondary: 'Montserrat', sans-serif;
 
     --margin-spacing: 40px;

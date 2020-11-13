@@ -1,0 +1,43 @@
+.block *,
+.block + * {
+    opacity: 0.6;
+}
+
+.block {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    .image {
+        @include shine;
+        height: 105px;
+        width: 150px;
+        position: absolute;
+        bottom: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .description {
+        @include shine;
+        margin-bottom: 15px;
+        height: 25px;
+        width: 135px;
+    }
+
+    .value {
+        @include shine;
+        height: 95px;
+        width: 120px;
+    }
+}
+
+.location {
+    @include shine;
+    margin-top: 15px;
+    height: 25px;
+    width: 60px;
+}

@@ -22,7 +22,6 @@
       "_atoms/(.*)$": "<rootDir>/src/components/atoms/$1",
       "_molecules/(.*)$": "<rootDir>/src/components/molecules/$1",
       "_organisms/(.*)$": "<rootDir>/src/components/organisms/$1",
-      "_templates/(.*)$": "<rootDir>/src/components/templates/$1",
       "_config/(.*)$": "<rootDir>/src/config/$1",
       "_images/(.*)$": "<rootDir>/src/images/$1",
       "_pages/(.*)$": "<rootDir>/src/pages/$1",
@@ -30,8 +29,7 @@
       "_utils/(.*)$": "<rootDir>/src/utils/$1",
       "_hooks/(.*)$": "<rootDir>/src/hooks/$1",
       "_helpers/(.*)$": "<rootDir>/src/helpers/$1",
-      "_services/(.*)$": "<rootDir>/src/services/$1",
-      "_redux/(.*)$": "<rootDir>/src/redux/$1"
+      "_services/(.*)$": "<rootDir>/src/services/$1"
     }
   },
   "eslintConfig": {
@@ -61,11 +59,8 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^3.11.0",
-    "react-redux": "^7.2.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.0",
-    "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0",
     "sass-resources-loader": "^2.1.1",
     "serve": "^11.3.2"
   },
