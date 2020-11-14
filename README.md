@@ -26,6 +26,13 @@
 <table style="width:100%">
   <tr>
     <th><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/nuvem.png?raw=true" width="80%" /></th>
+    <td><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/shimmer.gif?raw=true" width="80%" /></td>
+  </tr>
+</table>
+
+<table style="width:100%">
+  <tr>
+    <th><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/nuvem-landscape.png?raw=true" width="80%" /></th>
   </tr>
 </table>
 
@@ -40,6 +47,10 @@ Hoje há muitas maneiras de organizar componentes dentro da aplicação, mas o u
 #### Alias Import
 
 A escolha de usar o Alias Import ajuda muito na hora de importar os componentes em pastas aninhadas pois, usando ele se tem o caminho absoluto ao invés do relativo e com isso não preciso ficar voltando pastas e mais pastas para achar o caminho do componente.
+
+#### Shimmer Skeleton Preview
+
+Por mais que as chamadas API hoje em dia sejam rápidas, não mostrar um loading ao usuário final pode dar problemas. Por isso sempre opto em colocar nem que seja o famoso "carregando" porém, o efeito de Shimmer junto ao Skeleton Preview impôe bem mais respeito e credibilidade a interface, deixando a interface na etapa de carregamento bem próxima a interface pós carregamento.
 
 ## Requirements
 
