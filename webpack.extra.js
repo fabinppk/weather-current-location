@@ -14,7 +14,6 @@ module.exports = {
             _utils: path.resolve(__dirname, 'src/utils'),
             _helpers: path.resolve(__dirname, 'src/helpers'),
             _services: path.resolve(__dirname, 'src/services'),
-            _storybook: path.resolve(__dirname, '.storybook/components'),
             _hooks: path.resolve(__dirname, 'src/hooks'),
         },
     },
