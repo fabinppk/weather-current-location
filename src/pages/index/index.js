@@ -14,16 +14,20 @@ const Index = () => {
         return `https://openweathermap.org/img/wn/${icon}@4x.png`;
     };
 
+    const getLocation = () => {
+        navigator.geolocation.watchPosition(async (position) => {
+            const responseWeather = await getWeather({
+                latitude: position.coords.latitude,
+                longitude: position.coords.longitude,
+                // city: 'rio de janeiro',
+            });
+            setWeather(responseWeather);
+        });
+    };
+
     useEffect(() => {
         if (navigator.geolocation) {
-            navigator.geolocation.watchPosition(async (position) => {
-                const responseWeather = await getWeather({
-                    latitude: position.coords.latitude,
-                    longitude: position.coords.longitude,
-                    // city: 'rio de janeiro',
-                });
-                setWeather(responseWeather);
-            });
+            getLocation();
         }
     }, []);
 
