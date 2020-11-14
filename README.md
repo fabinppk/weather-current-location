@@ -4,28 +4,28 @@
 
 <table style="width:100%">
   <tr>
-    <th><img src="https://raw.githubusercontent.com/fabinppk/weather-current-location/main/prints/sol.png" width="80%" /></th>
-    <td><img src="https://raw.githubusercontent.com/fabinppk/weather-current-location/main/prints/nevoa.png" width="80%" /></td>
+    <th><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/sol.png?raw=true" width="80%" /></th>
+    <td><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/nevoa.png?raw=true" width="80%" /></td>
   </tr>
 </table>
 
 <table style="width:100%">
   <tr>
-    <th><img src="https://raw.githubusercontent.com/fabinppk/weather-current-location/main/prints/tempestade.png" width="80%" /></th>
-    <td><img src="https://raw.githubusercontent.com/fabinppk/weather-current-location/main/prints/garoa.png" width="80%" /></td>
+    <th><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/tempestade.png?raw=true" width="80%" /></th>
+    <td><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/garoa.png?raw=true" width="80%" /></td>
   </tr>
 </table>
 
 <table style="width:100%">
   <tr>
-    <th><img src="https://raw.githubusercontent.com/fabinppk/weather-current-location/main/prints/chuva.png" width="80%" /></th>
-    <td><img src="https://raw.githubusercontent.com/fabinppk/weather-current-location/main/prints/neve.png" width="80%" /></td>
+    <th><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/chuva.png?raw=true" width="80%" /></th>
+    <td><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/neve.png?raw=true" width="80%" /></td>
   </tr>
 </table>
 
 <table style="width:100%">
   <tr>
-    <th><img src="https://raw.githubusercontent.com/fabinppk/weather-current-location/main/prints/nuvem.png" width="80%" /></th>
+    <th><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/nuvem.png?raw=true" width="80%" /></th>
   </tr>
 </table>
 
