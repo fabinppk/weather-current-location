@@ -26,7 +26,7 @@
 <table style="width:100%">
   <tr>
     <th><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/nuvem.png?raw=true" width="80%" /></th>
-    <td><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/shimmer.gif?raw=true" width="80%" /></td>
+    <td><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/shimmer.gif?raw=true" width="292px" /></td>
   </tr>
 </table>
 
