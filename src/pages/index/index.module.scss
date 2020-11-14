@@ -188,3 +188,14 @@
         }
     }
 }
+
+@media (orientation: landscape) {
+    .content {
+        .icon {
+            position: absolute;
+            top: 50%;
+            left: 15%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
