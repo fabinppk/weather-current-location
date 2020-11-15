@@ -7,7 +7,9 @@ export default function Routes() {
     return (
         <Router>
             <Switch>
-                <Route exact path="/" component={Index} />
+                <Route exact path="/">
+                    <Index />
+                </Route>
             </Switch>
         </Router>
     );

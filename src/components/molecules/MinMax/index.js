@@ -21,13 +21,8 @@ const MinMax = ({ min, max }) => {
 };
 
 MinMax.propTypes = {
-    min: PropTypes.number,
-    max: PropTypes.number,
-};
-
-MinMax.defaultProps = {
-    min: '-',
-    max: '-',
+    min: PropTypes.number.isRequired,
+    max: PropTypes.number.isRequired,
 };
 
 export default MinMax;

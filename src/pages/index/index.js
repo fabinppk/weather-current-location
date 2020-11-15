@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
 import MinMax from '_molecules/MinMax';
 import ShimmerIndex from '_pages/index/shimmer';
 import ShimmerMinMax from '_molecules/MinMax/shimmer';
@@ -7,8 +8,8 @@ import { getWeather } from '_services/requestWeather';
 
 import style from '_pages/index/index.module.scss';
 
-const Index = () => {
-    const [weather, setWeather] = useState();
+const Index = ({ propsWeather }) => {
+    const [weather, setWeather] = useState(propsWeather);
 
     const defineUrlImage = (icon) => {
         return `https://openweathermap.org/img/wn/${icon}@4x.png`;
@@ -35,7 +36,7 @@ const Index = () => {
         <>
             {weather ? (
                 <div
-                    data-testid="app"
+                    data-testid="weather"
                     className={classnames(style.content, style[weather.weather[0].main])}
                 >
                     <img
@@ -53,13 +54,27 @@ const Index = () => {
                     <MinMax min={weather.main.temp_min} max={weather.main.temp_max} />
                 </div>
             ) : (
-                <div data-testid="app" className={style.content}>
+                <div data-testid="empty-weather" className={style.content}>
                     <ShimmerIndex />
                     <ShimmerMinMax />
                 </div>
             )}
         </>
     );
+};
+
+Index.propTypes = {
+    propsWeather: PropTypes.shape({
+        weather: PropTypes.arrayOf(
+            PropTypes.shape({
+                description: PropTypes.string,
+            })
+        ),
+    }),
+};
+
+Index.defaultProps = {
+    propsWeather: null,
 };
 
 export default Index;
