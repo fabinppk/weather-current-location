@@ -4,35 +4,35 @@
 
 <table style="width:100%">
   <tr>
-    <th><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/sol.png?raw=true" width="80%" /></th>
-    <td><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/nevoa.png?raw=true" width="80%" /></td>
+    <th><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/sol.jpg?raw=true" width="80%" /></th>
+    <td><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/nevoa.jpg?raw=true" width="80%" /></td>
   </tr>
 </table>
 
 <table style="width:100%">
   <tr>
-    <th><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/tempestade.png?raw=true" width="80%" /></th>
-    <td><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/garoa.png?raw=true" width="80%" /></td>
+    <th><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/tempestade.jpg?raw=true" width="80%" /></th>
+    <td><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/garoa.jpg?raw=true" width="80%" /></td>
   </tr>
 </table>
 
 <table style="width:100%">
   <tr>
-    <th><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/chuva.png?raw=true" width="80%" /></th>
-    <td><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/neve.png?raw=true" width="80%" /></td>
+    <th><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/chuva.jpg?raw=true" width="80%" /></th>
+    <td><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/neve.jpg?raw=true" width="80%" /></td>
   </tr>
 </table>
 
 <table style="width:100%">
   <tr>
-    <th><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/nuvem.png?raw=true" width="80%" /></th>
+    <th><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/nuvem.jpg?raw=true" width="80%" /></th>
     <td><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/shimmer.gif?raw=true" width="292px" /></td>
   </tr>
 </table>
 
 <table style="width:100%">
   <tr>
-    <th><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/nuvem-landscape.png?raw=true" width="80%" /></th>
+    <th><img src="https://github.com/fabinppk/weather-current-location/blob/main/prints/chuva-landscape.jpg?raw=true" width="80%" /></th>
   </tr>
 </table>
 
@@ -59,6 +59,10 @@ A escolha de usar o Alias Import ajuda muito na hora de importar os componentes 
 #### Shimmer Skeleton Preview
 
 Por mais que as chamadas API hoje em dia sejam rápidas, não mostrar um loading ao usuário final pode dar problemas. Por isso sempre opto em colocar nem que seja o famoso "carregando" porém, o efeito de Shimmer junto ao Skeleton Preview impôe bem mais respeito e credibilidade a interface, deixando a interface na etapa de carregamento bem próxima a interface pós carregamento.
+
+#### Meta tag theme-color
+
+O uso da meta tag theme-color faz a barra superior do navegador mobile mudar de cor (definida pelo dev, mas geralmente a cor primária da aplicação). Nesse caso em específico faço uso disso de forma dinâmica alterando a cor da meta tag de acordo com a cor primária do clima, tornando a aplicação bem mais imersiva para o usuário.
 
 ## Requirements
 
