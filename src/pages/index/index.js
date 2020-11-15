@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import ButtonRefresh from '_atoms/ButtonRefresh';
 import { ToastContainer, toast } from 'react-toastify';
 import MinMax from '_molecules/MinMax';
 import ShimmerIndex from '_pages/index/shimmer';
@@ -12,36 +13,52 @@ import style from '_pages/index/index.module.scss';
 
 const Index = ({ propsWeather }) => {
     const [weather, setWeather] = useState(propsWeather);
+    const [loading, setLoading] = useState(false);
 
     const defineUrlImage = (icon) => {
         return `https://openweathermap.org/img/wn/${icon}@4x.png`;
     };
 
-    const getLocation = () => {
-        navigator.geolocation.getCurrentPosition(async (position) => {
-            try {
-                const responseWeather = await getWeather({
-                    latitude: position.coords.latitude,
-                    longitude: position.coords.longitude,
-                    // city: 'rio de janeiro',
-                });
-                setWeather(responseWeather);
-            } catch (error) {
-                toast.error(
-                    '🦄 Limite da API Excedido, espere alguns minutos e atualize a página!'
-                );
-            }
+    const getLocation = async ({ latitude, longitude }) => {
+        setLoading(true);
+        try {
+            const responseWeather = await getWeather({
+                latitude,
+                longitude,
+                // city: 'rio de janeiro',
+            });
+            setWeather(responseWeather);
+            setLoading(true);
+        } catch (error) {
+            toast.error('🦄 Limite da API Excedido, espere alguns minutos e atualize a página!');
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const getPosition = () => {
+        navigator.geolocation.getCurrentPosition((position) => {
+            getLocation({
+                latitude: position.coords.latitude,
+                longitude: position.coords.longitude,
+            });
         });
+    };
+
+    const fallbackLoading = () => {
+        setWeather(null);
+        getPosition();
     };
 
     useEffect(() => {
         if (navigator.geolocation) {
-            getLocation();
+            getPosition();
         }
     }, []);
 
     return (
         <>
+            <ButtonRefresh rotate={loading} setLoading={fallbackLoading} />
             {weather ? (
                 <div
                     data-testid="weather"
