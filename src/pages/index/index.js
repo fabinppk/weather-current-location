@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import { ToastContainer, toast } from 'react-toastify';
 import MinMax from '_molecules/MinMax';
 import ShimmerIndex from '_pages/index/shimmer';
 import ShimmerMinMax from '_molecules/MinMax/shimmer';
 import { getWeather } from '_services/requestWeather';
 
+import 'react-toastify/dist/ReactToastify.css';
 import style from '_pages/index/index.module.scss';
 
 const Index = ({ propsWeather }) => {
@@ -16,13 +18,19 @@ const Index = ({ propsWeather }) => {
     };
 
     const getLocation = () => {
-        navigator.geolocation.watchPosition(async (position) => {
-            const responseWeather = await getWeather({
-                latitude: position.coords.latitude,
-                longitude: position.coords.longitude,
-                // city: 'rio de janeiro',
-            });
-            setWeather(responseWeather);
+        navigator.geolocation.getCurrentPosition(async (position) => {
+            try {
+                const responseWeather = await getWeather({
+                    latitude: position.coords.latitude,
+                    longitude: position.coords.longitude,
+                    // city: 'rio de janeiro',
+                });
+                setWeather(responseWeather);
+            } catch (error) {
+                toast.error(
+                    '🦄 Limite da API Excedido, espere alguns minutos e atualize a página!'
+                );
+            }
         });
     };
 
@@ -59,6 +67,15 @@ const Index = ({ propsWeather }) => {
                     <ShimmerMinMax />
                 </div>
             )}
+            <ToastContainer
+                position="top-center"
+                autoClose={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+            />
         </>
     );
 };

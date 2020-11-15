@@ -24,3 +24,10 @@
         }
     }
 }
+
+@media (orientation: landscape) and (max-width: 960px) {
+    .blockMinMax {
+        bottom: 45%;
+        right: 2%;
+    }
+}
