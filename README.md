@@ -44,6 +44,14 @@
 
 Hoje há muitas maneiras de organizar componentes dentro da aplicação, mas o uso do Atomic Design me agrada muito pois cria uma relação de componentes "menores" em um nível inferior (átomos) e componentes maiores em um nível superior (organismos). Mas no final, a estrutura de pastas, seja qual for, deve definir um padrão de organização dentro do projeto.
 
+#### Linter/Prettier
+
+Pra mim projetos que nascem prezando extensividade, qualidade e manutenibilidade precisam ter essas duas ferramentas integradas por padrão. Elas exigem que o código de todo o projeto siga um conjunto de regras e que qualquer coisa fora disso seja rejeitada. Junto a isso o Prettier vem para automatizar a formatação do código baseado nas regras do Linter. Hoje em dia me sinto muito desconfortável ao trabalhar em um projeto sem Linter e Prettier.
+
+#### Pré-commit
+
+Por padrão sempre configuro um pré-commit nos meu projetos que basicamente rodam testes e validam o build e rodam o linter. Isso ajuda a evitar que código quebrado ou fora do padrão vire um commit, evitando assim que commits extras de ajustes venham a existir durante o processo de desenvolvimento de uma feature.
+
 #### Alias Import
 
 A escolha de usar o Alias Import ajuda muito na hora de importar os componentes em pastas aninhadas pois, usando ele se tem o caminho absoluto ao invés do relativo e com isso não preciso ficar voltando pastas e mais pastas para achar o caminho do componente.
