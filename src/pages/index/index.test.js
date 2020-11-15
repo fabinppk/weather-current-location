@@ -14,7 +14,7 @@ it('renders Index with weather', () => {
     expect(getByTestId('empty-weather')).toBeInTheDocument();
 });
 
-describe('<Login /> with no props', () => {
+describe('<ButtonRefresh /> with no props', () => {
     const container = shallow(<Index />);
     it('should match the snapshot', () => {
         expect(container.html()).toMatchSnapshot();
@@ -29,7 +29,7 @@ describe('<Login /> with no props', () => {
     });
 });
 
-describe('<Login /> with props', () => {
+describe('<ButtonRefresh /> with props', () => {
     const weather = WEATHER;
 
     const container = shallow(<Index propsWeather={weather} />);
