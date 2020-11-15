@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import { setThemeColor } from '_helpers/setBrowserTheme';
 import ButtonRefresh from '_atoms/ButtonRefresh';
 import { ToastContainer, toast } from 'react-toastify';
 import MinMax from '_molecules/MinMax';
@@ -28,6 +29,7 @@ const Index = ({ propsWeather }) => {
                 // city: 'rio de janeiro',
             });
             setWeather(responseWeather);
+            setThemeColor();
             setLoading(true);
         } catch (error) {
             toast.error('🦄 Limite da API Excedido, espere alguns minutos e atualize a página!');
